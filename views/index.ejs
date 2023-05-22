@@ -24,18 +24,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Notes</td>
-                        <td><a href="https://github.com/amanshakya2001/Notes-Webapp" target="_blank">Click here</a></td>
-                        <td><a href="https://notes.amanshakya.tech" target="_blank">Click here</a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Painting</td>
-                        <td><a href="https://github.com/amanshakya2001/Painting-Frontend" target="_blank">Click here</a></td>
-                        <td><a href="https://chitramandir.360solutionprovider.com" target="_blank">Click here</a></td>
-                    </tr>
+                    <% for (let i = 0; i < data.length; i++) { %>
+                        <tr>
+                            <th scope="row"><%= data[i].serial_no %></th>
+                            <td><%= data[i].name %></td>
+                            <td><a href=<%= data[i].github_link %> target="_blank">Click here</a></td>
+                            <td><a href=<%= data[i].live_link %> target="_blank">Click here</a></td>
+                        </tr>
+                      <% } %>
                 </tbody>
             </table>
         </div>
